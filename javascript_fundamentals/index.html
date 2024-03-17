@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- favicon -->
+  <link rel="icon" href="/asset/favicon.webp" type="image/x-icon">
+  <!-- mobile app favicon -->
+  <link rel="apple-touch-icon" href="/asset/favicon.webp">
+</head>
+<body>
+  <h1>simple app</h1>
+  <p>latitude</p>
+  <input type="range" id="lat" min="-180" max="180" value="50"><span id="latDisplay"></span>
+  <p>longitude</p>
+  <input type="range" id="lon" min="-180" max="180" value="50"><span id="lonDisplay"></span>
+  <p>city name *not working</p>
+  <input type="text" id="cityName" placeholder="Enter city name">
+  <br>
+  <button id="getWeatherButton">Get Weather</button>
+  <div id="weatherResult">Result</div>
+
+  <script type="module" src="/async.js"></script>
+</body>
+</html>
