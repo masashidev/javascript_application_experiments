@@ -1,26 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- favicon -->
-  <link rel="icon" href="/asset/favicon.webp" type="image/x-icon">
-  <!-- mobile app favicon -->
-  <link rel="apple-touch-icon" href="/asset/favicon.webp">
-</head>
-<body>
-  <h1>simple app</h1>
-  <p>latitude</p>
-  <input type="range" id="lat" min="-180" max="180" value="50"><span id="latDisplay"></span>
-  <p>longitude</p>
-  <input type="range" id="lon" min="-180" max="180" value="50"><span id="lonDisplay"></span>
-  <p>city name *not working</p>
-  <input type="text" id="cityName" placeholder="Enter city name">
-  <br>
-  <button id="getWeatherButton">Get Weather</button>
-  <div id="weatherResult">Result</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- favicon -->
+    <link rel="icon" href="/asset/favicon.webp" type="image/x-icon" />
+    <!-- mobile app favicon -->
+    <link rel="apple-touch-icon" href="/asset/favicon.webp" />
+    <link rel="stylesheet" href="/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1 class="m-4 flex bg-gray-200 p-4 font-extrabold text-gray-700 shadow-md">
+      simple app
+    </h1>
+    <div class="m-4 rounded-lg border-2 border-gray-200 p-4">
+      <p>latitude</p>
+      <input type="range" id="lat" min="-180" max="180" value="50" /><span
+        id="latDisplay"
+      ></span>
+      <p>longitude</p>
+      <input type="range" id="lon" min="-180" max="180" value="50" /><span
+        id="lonDisplay"
+      ></span>
+      <p>city name *not working</p>
+      <input type="text" id="cityName" placeholder="Enter city name" />
+      <br />
+      <button id="getWeatherButton">Get Weather</button>
+      <div id="weatherResult">Result</div>
+    </div>
 
-  <script type="module" src="/async.js"></script>
-</body>
+    <button
+      class="m-4 rounded-md bg-gray-200 p-4 hover:bg-slate-700 hover:shadow-md"
+      id="emailButton"
+    >
+      email
+    </button>
+
+    <div
+      class="m-4 cursor-help rounded-md border-2 border-gray-200 p-4 hover:bg-slate-700 hover:shadow-md"
+    >
+      <h1>Language List</h1>
+      <ul
+        id="languageList"
+        class="bg-grkay-200 m-4 flex justify-center p-4 text-gray-700"
+      >
+        <li class="fixed left-0 m-4 bg-gray-200 shadow-md">A</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Go</li>
+        <li class="round-md in bg-red-200 p-5">Rust</li>
+      </ul>
+    </div>
+
+    <div class="m-4 flex justify-center bg-blue-100 p-4 sm:bg-fuchsia-300">
+      <table
+        class="border-black-500 m-8 w-52 table-auto border-collapse border-2 bg-rose-100 p-8"
+      >
+        <thead class="m-4 bg-gray-200 p-4">
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Smith</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="m-auto mb-2 h-2 w-11/12 rounded-lg bg-slate-600"></div>
+    <div class="m-auto mb-2 h-2 w-11/12 rounded-lg bg-slate-600"></div>
+    <div class="m-auto mb-2 h-2 w-11/12 rounded-lg bg-slate-600"></div>
+
+    <a
+      href="https://www.google.com"
+      class="m-4 inline-block cursor-pointer justify-center rounded-full border-blue-200 bg-gray-200 p-4 text-sm text-gray-700"
+      >Googles
+      <span class="bg-rose-300 font-bold">Google</span>
+    </a>
+
+    <div class="space-y-8">
+      <div class="container m-4 rounded-lg border-2 border-gray-200 p-4">
+        <h1 class="mb-4 font-bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum.
+        </h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum
+          accusantium aspernatur cum. Quos neque aspernatur provident est
+          dolorum ratione officia ipsam pariatur magni praesentium earum
+          facilis, totam tempore aperiam.
+        </p>
+      </div>
+      <div
+        class="transition ease-out hover:translate-y-3 hover:scale-110  m-auto mb-4 size-56 overflow-hidden border-2 border-gray-200 p-4 hover:skew-x-12 scroll-smooth"
+      >
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum.
+        </h1>
+        <p class="indent">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum
+          accusantium aspernatur cum. Quos neque aspernatur provident est
+          dolorum ratione officia ipsam pariatur magni praesentium earum
+          facilis, totam tempore aperiam.
+        </p>
+      </div>
+      <div class="m-4 line-clamp-5 border-2 p-4">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum.
+        </h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum
+          accusantium aspernatur cum. Quos neque aspernatur provident est
+          dolorum ratione officia ipsam pariatur magni praesentium earum
+          facilis, totam tempore aperiam.
+        </p>
+      </div>
+    </div>
+
+    <!-- choosing from options -->
+    <div
+      class="m-4 flex w-auto justify-center bg-gray-200 p-4 text-sm text-gray-700"
+    >
+      <select id="selectLanguage" class="m-4 rounded-lg p-4">
+        <option class="bg-rose-300 font-bold" value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Go">Go</option>
+        <option value="Rust">Rust</option>
+      </select>
+    </div>
+
+    <div
+      class="fixed bottom-0 w-full rounded-xl bg-gradient-to-r from-white to-green-500 p-2"
+    >
+      <nav>
+        <ul class="flex justify-center space-x-4">
+          <button
+            class="animate-pulse rounded-lg border-2 border-slate-800 bg-slate-300 p-2 text-xs font-bold ring-2 ring-red-400"
+          >
+            HOME
+          </button>
+          <button
+            class="rounded-lg border-2 border-slate-800 bg-slate-300 p-2 text-xs font-bold ring-2 ring-red-400 hover:animate-bounce"
+          >
+            LIST
+          </button>
+          <button
+            class="hover:animate-spin rounded-lg border-2 border-slate-800 bg-slate-300 p-2 text-xs font-bold ring-2 ring-red-400"
+          >
+            MENU
+          </button>
+          <button
+            class="rounded-lg border-2 border-slate-800 bg-slate-300 p-2 text-xs font-bold ring-2 ring-red-400"
+          >
+            MAP
+          </button>
+        </ul>
+      </nav>
+    </div>
+
+    <script type="module" src="/async.js"></script>
+  </body>
 </html>
